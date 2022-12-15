@@ -1,15 +1,17 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import Articles from '../Articles/Articles';
+import Heros from '../Heros/Heros';
 
 const Home = () => {
-    const news = useLoaderData([])
-    console.log(news.articles);
+
     return (
-      <div>
-        <h1>news length {news?.articles?.length}</h1>
-        {
-            news?.articles?.map(article => console.log(article))
-        }
+      <div className="max-w-screen-2xl mx-auto">
+        <section className='mt-10'>
+         <Heros></Heros>
+        </section>
+        <section>
+          <Articles></Articles>
+        </section>
       </div>
     );
 };
